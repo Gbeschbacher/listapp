@@ -1,0 +1,26 @@
+{
+  "name": "Listapp",
+  "version": "1.0.0",
+  "description": "Wir sind toll.",
+  "main": "index.js",
+  "dependencies": {
+    "asciimo": "^0.3.1"
+  },
+  "devDependencies": {
+    "coffee-script": "^1.9.1",
+    "gulp": "^3.8.11"
+  },
+  "scripts": {
+    "test": "echo \" Error: no tests specified \" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Gbeschbacher/listapp.git"
+  },
+  "author": "Georg Eschbacher",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Gbeschbacher/listapp/issues"
+  },
+  "homepage": "https://github.com/Gbeschbacher/listapp"
+}
