@@ -29,5 +29,7 @@ tmp/
 out/
 build/
 docs/
-
 .coverrun
+
+client/build
+client/bower

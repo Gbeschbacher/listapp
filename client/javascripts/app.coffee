@@ -21,8 +21,8 @@ app.config [
     $routeProvider
 
     .when('/',
-      templateUrl: 'partials/patientDetails'
-      controller: 'PatientDetailsCtrl')
+      templateUrl: 'partials/listView'
+      controller: 'ListViewCtrl')
 
     .otherwise redirectTo: '/'
 
