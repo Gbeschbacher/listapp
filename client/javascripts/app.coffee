@@ -1,7 +1,9 @@
 app = angular.module('app', [
-    'app.controllers'
-    'app.directives'
-    'app.services'
+  'ngRoute'
+  'pascalprecht.translate'
+  'app.controllers'
+  'app.directives'
+  'app.services'
 ])
 
 angular.module 'app.controllers', []
@@ -16,19 +18,19 @@ app.config [
     '$translateProvider'
     ($routeProvider, $locationProvider, $translateProvider) ->
 
-    $locationProvider.html5Mode true
+      $locationProvider.html5Mode true
 
-    $routeProvider
+      $routeProvider
 
-    .when('/',
-      templateUrl: 'partials/listView'
-      controller: 'ListViewCtrl')
+      .when('/',
+        templateUrl: 'partials/listView'
+        controller: 'ListViewCtrl')
 
-    .otherwise redirectTo: '/'
+      .otherwise redirectTo: '/'
 
-    # I18N
-    $translateProvider.preferredLanguage 'de-DE'
-    $translateProvider.useStaticFilesLoader
-      prefix: 'static/languages/'
-      suffix: '.json'
+      # I18N
+      $translateProvider.preferredLanguage 'de-DE'
+      $translateProvider.useStaticFilesLoader
+        prefix: 'static/languages/'
+        suffix: '.json'
 ]

@@ -30,8 +30,9 @@ out/
 build/
 docs/
 
-client/static/build/
-client/static/bower/
-
+client/statics/build/
+client/statics/bower/
+.vagrant
+Vagrantfile
 .coverrun
 

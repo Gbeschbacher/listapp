@@ -15,7 +15,7 @@ app = express()
 app.set "views", __dirname + "/../client/views/"
 app.set "view engine", "jade"
 
-app.use morgan("combined")
+app.use morgan("tiny")
 app.use bodyParser.urlencoded(extended: true)
 app.use bodyParser.json()
 
