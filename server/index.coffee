@@ -19,11 +19,8 @@ app.use morgan("combined")
 app.use bodyParser.urlencoded(extended: true)
 app.use bodyParser.json()
 
-# serve build files
-app.use "/build", express.static(__dirname + '/../client/build')
-
-#serve bower files
-app.use "/bower", express.static(__dirname + '/../client/bower')
+# serve statics
+app.use express.static(__dirname + '/../client/statics/')
 
 #serve css files
 app.use express.static(__dirname + '/../client/stylesheets')

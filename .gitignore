@@ -30,8 +30,8 @@ out/
 build/
 docs/
 
-client/build/
-client/bower/
+client/static/build/
+client/static/bower/
 
 .coverrun
 
