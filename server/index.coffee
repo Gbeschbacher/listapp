@@ -20,7 +20,8 @@ app.use bodyParser.urlencoded(extended: true)
 app.use bodyParser.json()
 
 # serve build files
-app.use express.static('./build')
+app.use express.static('./client/build')
+app.use express.static('./client/build/js')
 
 # bind api
 app.use api
