@@ -15,8 +15,7 @@
     "gulp": "^3.8.11"
   },
   "scripts": {
-    "test": "echo \" Error: no tests specified \" && exit 1",
-    "start": "node app"
+    "test": "echo \" Error: no tests specified \" && exit 1"
   },
   "repository": {
     "type": "git",

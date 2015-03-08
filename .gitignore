@@ -30,4 +30,7 @@ out/
 build/
 docs/
 
+client/build/
+client/bower/
+
 .coverrun
