@@ -7,6 +7,8 @@ concat = require 'gulp-concat'
 del = require 'del'
 livereload = require 'gulp-livereload'
 nodemon = require 'gulp-nodemon'
+less = require 'gulp-less'
+path = require 'path'
 
 livereload
     start: true
@@ -53,13 +55,13 @@ gulp.task 'watch', ["watch:coffee", "watch:jade"]
 gulp.task 'build:coffee', ->
     gulp.src( coffeeSourceClient )
     .pipe( concat ( 'build.coffee' ) )
-    .pipe( gulp.dest( './client/statics/build/js' ) )
+    .pipe( gulp.dest( './client/static/build/js' ) )
     .pipe( coffee({bare: true}).on( 'error', gutil.log ) )
-    .pipe( gulp.dest( './client/statics/build/js' ) )
+    .pipe( gulp.dest( './client/static/build/js' ) )
     .pipe( livereload() )
 
 gulp.task 'clean:build-coffee', ['build:coffee'], ->
-    del( './client/statics/build/js/build.coffee')
+    del( './client/static/build/js/build.coffee')
 
 gulp.task 'watch:coffee', ->
     gulp.watch coffeeSourceClient, ['clean:build-coffee'], (file) ->
@@ -87,3 +89,8 @@ gulp.task "nodemon", ["build"], ->
         env: "NODE_ENV": "development")
     .on "restart", ->
             console.log "app changed"
+
+gulp.task "less", ->
+  gulp.src('./client/stylesheets/**/*.less')
+  .pipe( less { paths: path.join(__dirname, 'less', 'includes') })
+  .pipe(gulp.dest('./client/static/build/css'))
